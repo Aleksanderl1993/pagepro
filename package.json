@@ -1,0 +1,37 @@
+{
+  "name": "pagepro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksanderl1993/pagepro.git"
+  },
+  "author": "AL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksanderl1993/pagepro/issues"
+  },
+  "homepage": "https://github.com/Aleksanderl1993/pagepro#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "style-loader": "^0.23.1"
+  }
+}
