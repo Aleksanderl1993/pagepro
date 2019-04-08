@@ -1,0 +1,33 @@
+//  fonts
+
+@import url("https://use.typekit.net/stg1zlr.css");
+
+//  reset styles
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//  structure
+
+body {
+    font-family: "Acumin Pro", Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+//  fonts
+
+.upper {
+    text-transform: uppercase;
+}

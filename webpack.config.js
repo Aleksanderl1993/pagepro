@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 
 
@@ -28,11 +29,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -44,6 +45,12 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
             }
         ]
     },
@@ -52,12 +59,15 @@ module.exports = {
             filename: 'index.html',
             template: 'src/html/index.html'
         }),
+        new CopyPlugin([
+            { from: 'src/images', to: 'images' },
+        ]),
         new BrowserSyncPlugin({
             // browse to http://localhost:3000/ during development,
             // ./public directory is being served
             host: 'localhost',
             port: 3000,
-            server: { baseDir: ['dist'] }
+            server: {baseDir: ['dist']}
         })
     ]
 };
