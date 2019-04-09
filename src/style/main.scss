@@ -1,21 +1,48 @@
+//  extend
+
+%font16bold {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+%font24bold {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+%imgResponsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+//
+
+.responsive-img {
+    @extend %imgResponsive;
+}
+
 .main-photo {
-    width: calc(7/12 * 100%);
+    width: calc(7 / 12 * 100% - 50px);
+    margin-right: 50px;
     color: $color-white;
+
     img {
-        width: 100%;
-        height: auto;
-        display: block;
+        @extend %imgResponsive;
     }
 }
+
 .main-photo-content {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+
     h2 {
         padding-bottom: 30px;
         border-bottom: 1px solid $color-white;
     }
+
     p {
         font-size: 12px;
         line-height: 2em;
@@ -23,7 +50,85 @@
     }
 }
 
-.slider-wrapper {
-    width: calc(5/12 * 100% - 20px);
-    padding-left: 20px;
+#news.slider-wrapper {
+    width: calc(5 / 12 * 100% - 50px);
+    margin-left: 50px;
+
+    h2 {
+        @extend %font24bold;
+    }
+
+    h3 {
+        @extend %font16bold;
+        color: $color-red-light;
+    }
 }
+
+.article-title {
+    @extend %font16bold;
+}
+
+.article-time {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 10px;
+    }
+}
+
+#trending.slider-wrapper {
+    h3 {
+        @extend %font16bold;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            padding: 30px;
+        }
+    }
+}
+
+//  slider nav customizing
+
+.swiper-button-prev {
+    right: 50px;
+    left: unset;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-size: 10px 17px;
+}
+
+//  happening
+
+.large-article-box {
+    width: calc(8 / 12 * 100% - 20px);
+    margin-right: 20px;
+
+    & div:first-child {
+        margin-bottom: 30px;
+    }
+
+    .large-article-desc {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $color-white;
+    }
+}
+
+.small-article-box {
+    width: calc(8 / 12 * 100% - 20px);
+    margin-left: 20px;
+}
+
