@@ -2,26 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Pagepro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+        function triggerMenu() {
+            var openMobileMenu = document.getElementById('mobile-menu');
+            openMobileMenu.classList.toggle("open");
+        }
+    </script>
 </head>
 <body>
 
 
-<header class="flex flex-center">
-    <div class="logo upper">
-        <a href="#0">logo</a>
+<!--<header class="flex flex-center">-->
+<header>
+    <div class="flex flex-center">
+        <div id="mobile-menu-button">
+            <a id="mobile-menu-button-trigger" href="#0" onclick="triggerMenu()"><img src="../images/menu-button.png" alt="menu-button"></a>
+        </div>
+        <div class="logo upper">
+            <a href="#0">logo</a>
+        </div>
+        <nav>
+            <ul class="flex flex-center upper">
+                <li><a href="#0">home</a></li>
+                <li><a href="#0">discovery</a></li>
+                <li><a href="#0">photos</a></li>
+                <li><a href="#0">contact</a></li>
+                <li><img src="../images/christopher-campbell-28567-unsplash.png" width="30" height="30" alt="bla bla">
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav>
-        <ul class="flex flex-center upper">
-            <li><a href="#0">home</a></li>
-            <li><a href="#0">discovery</a></li>
-            <li><a href="#0">photos</a></li>
-            <li><a href="#0">contact</a></li>
-            <li><img src="../images/christopher-campbell-28567-unsplash.png" width="30" height="30" alt="bla bla"></li>
+    <div id="mobile-menu">
+        <ul>
+            <li><a href="#0"><img src="../images/home.png" alt="home">home</a></li>
+            <li><a href="#0"><img src="../images/discovery.png" alt="discovery">discovery</a></li>
+            <li><a href="#0"><img src="../images/photos.png" alt="photos">photos</a></li>
+            <li><a href="#0"><img src="../images/contact.png" alt="contact">contact</a></li>
+            <li><a href="#0"><img src="../images/profile.png" alt="profile">profile</a></li>
         </ul>
-    </nav>
+    </div>
 </header>
 
 <div id="more-news" class="flex container">
