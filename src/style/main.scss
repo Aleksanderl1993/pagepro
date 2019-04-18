@@ -56,6 +56,7 @@
 
     h2 {
         @extend %font24bold;
+        border-bottom: 1px solid $color-grey;
     }
 
     h3 {
@@ -106,8 +107,6 @@
 
 //  happening
 
-
-
 .large-article-box {
     width: calc(8 / 12 * 100% - 20px);
     margin-right: 20px;
@@ -132,9 +131,50 @@
 .small-article-box {
     width: calc(4 / 12 * 100% - 20px);
     margin-left: 20px;
+
     h4 {
         margin-block-start: 1em;
         margin-block-end: 0;
     }
 }
 
+@media all and (max-width: 1200px) {
+    #more-news {
+        flex-direction: column;
+
+        .main-photo {
+            width: 100%;
+        }
+
+        #news {
+            width: 100%;
+            margin-left: 0;
+
+            .swiper-slide {
+                display: flex;
+
+                div:first-child {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+    #happening {
+        & > div {
+            flex-direction: column;
+        }
+
+        .large-article-box {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .small-article-box {
+            display: flex;
+            width: 100%;
+
+            & div {
+            }
+        }
+    }
+}

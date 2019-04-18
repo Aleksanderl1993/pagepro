@@ -2,6 +2,11 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     font-size: 20px;
+    .logo {
+        a {
+            color: $color-red-light;
+        }
+    }
 }
 
 nav {
@@ -12,8 +17,23 @@ nav {
             }
             a {
                 margin: 0 20px;
+                &:visited {
+                    color: $color-grey;
+                }
             }
         }
     }
 }
 
+@media all and (max-width: 1200px) {
+    #more-news {
+        flex-direction: column;
+        .main-photo {
+            width: 100%;
+        }
+        #news {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

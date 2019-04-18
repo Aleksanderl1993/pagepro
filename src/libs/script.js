@@ -21,4 +21,11 @@ var swiperTrending = new Swiper('#trending .swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        // when window width is <= 640px
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        }
+    }
 });
