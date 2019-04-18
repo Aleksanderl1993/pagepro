@@ -26,6 +26,9 @@ var swiperTrending = new Swiper('#trending .swiper-container', {
         1200: {
             slidesPerView: 2,
             spaceBetween: 30
+        },
+        600: {
+            slidesPerView: 1
         }
     }
 });

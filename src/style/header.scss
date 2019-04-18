@@ -2,6 +2,7 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     font-size: 20px;
+
     .logo {
         a {
             color: $color-red-light;
@@ -15,8 +16,10 @@ nav {
             &:last-child {
                 margin-left: 40px;
             }
+
             a {
                 margin: 0 20px;
+
                 &:visited {
                     color: $color-grey;
                 }
@@ -26,14 +29,41 @@ nav {
 }
 
 @media all and (max-width: 1200px) {
+    header {
+        font-size: 18px;
+    }
     #more-news {
         flex-direction: column;
+
         .main-photo {
             width: 100%;
         }
+
         #news {
             width: 100%;
             margin-left: 0;
         }
+    }
+    nav {
+        ul {
+            li {
+                &:last-child {
+                    margin-left: 20px;
+                }
+
+                a {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+    header {
+        font-size: 12px;
     }
 }

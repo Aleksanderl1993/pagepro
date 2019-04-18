@@ -34,9 +34,10 @@
 
 .main-photo-content {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    transform: translateY(20%);
 
     h2 {
         padding-bottom: 30px;
@@ -138,27 +139,17 @@
     }
 }
 
-@media all and (max-width: 1200px) {
-    #more-news {
-        flex-direction: column;
+@media all and (min-width: 601px) and (max-width: 1200px) {
 
-        .main-photo {
-            width: 100%;
-        }
+    .swiper-slide {
+        display: flex;
 
-        #news {
-            width: 100%;
-            margin-left: 0;
-
-            .swiper-slide {
-                display: flex;
-
-                div:first-child {
-                    margin-right: 40px;
-                }
-            }
+        div:first-child {
+            margin-right: 40px;
         }
     }
+
+
     #happening {
         & > div {
             flex-direction: column;
@@ -172,9 +163,67 @@
         .small-article-box {
             display: flex;
             width: 100%;
+            margin-left: 0;
+            flex-wrap: wrap;
 
-            & div {
+            & div:nth-child(2n - 1) {
+                flex-basis: calc(50% - 20px);
+                margin-right: 20px;
             }
+
+            & div:nth-child(2n) {
+                flex-basis: calc(50% - 20px);
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .main-photo-content {
+        left: 20px;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        transform: none;
+        h2, h3 {
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+        }
+        h2 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            padding-bottom: 0;
+        }
+    }
+    #happening {
+        & > div {
+            flex-direction: column;
+        }
+    }
+    .large-article-box {
+        width: 100%;
+        margin-bottom: 40px;
+        border-bottom: 1px solid $color-grey-light;
+        padding-bottom: 40px;
+    }
+    .small-article-box {
+        width: 100%;
+        margin-left: 0;
+
+        & div:nth-child(2n - 1) {
+            flex-basis: 100%;
+            margin-right: 0;
+        }
+
+        & div:nth-child(2n) {
+            flex-basis: 100%;
+            margin-left: 0;
         }
     }
 }
