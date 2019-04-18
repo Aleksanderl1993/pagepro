@@ -73,14 +73,14 @@
 .article-time {
     display: flex;
     align-items: center;
-
+    color: $color-grey-light;
     p {
         margin-left: 10px;
     }
     a {
-        color: orange;
         text-decoration: underline;
         font-style: italic;
+        color: $color-grey-light;
     }
 }
 
