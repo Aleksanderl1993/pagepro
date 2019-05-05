@@ -1,4 +1,14 @@
 console.log('haha');
+import Swiper from 'swiper'
+
+// function triggerMenu() {
+var openMobileMenu = document.getElementById('mobile-menu-button-trigger');
+
+openMobileMenu.onclick = function() {
+    var getOpenButton = document.getElementById('mobile-menu');
+    getOpenButton.classList.toggle("open");
+    console.log('opopoopo');
+};
 
 var swiper = new Swiper('#news .swiper-container', {
     navigation: {

@@ -30,11 +30,14 @@ nav {
         }
     }
 }
+
 #mobile-menu-button {
     display: none;
 }
+
 #mobile-menu {
     display: none;
+
     &.open {
         display: block;
         animation-name: appear;
@@ -119,9 +122,11 @@ nav {
 
             li {
                 margin-bottom: 40px;
+
                 img {
                     margin-right: 40px;
                 }
+
                 a {
                     text-transform: uppercase;
                     color: $color-grey;

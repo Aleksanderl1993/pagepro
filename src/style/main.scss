@@ -74,9 +74,11 @@
     display: flex;
     align-items: center;
     color: $color-grey-light;
+
     p {
         margin-left: 10px;
     }
+
     a {
         text-decoration: underline;
         font-style: italic;
@@ -191,17 +193,21 @@
         right: 20px;
         bottom: 20px;
         transform: none;
+
         h2, h3 {
             margin-block-start: 0.5em;
             margin-block-end: 0.5em;
         }
+
         h2 {
             font-size: 18px;
             padding-bottom: 10px;
         }
+
         h3 {
             font-size: 16px;
         }
+
         p {
             padding-bottom: 0;
         }

@@ -1,5 +1,4 @@
 //  fonts
-
 @import url("https://use.typekit.net/stg1zlr.css");
 
 //  color vars
@@ -45,6 +44,7 @@ body {
     padding: 10px 20px;
     font-size: 12px;
     color: $color-white;
+
     &:hover {
         background-color: $color-red;
     }
